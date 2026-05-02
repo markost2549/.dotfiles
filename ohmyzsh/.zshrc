@@ -71,7 +71,7 @@ ZSH_THEME="marko"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions yarn-autocompletions pnpm-shell-completion nx-completion)
+#plugins=(git zsh-syntax-highlighting zsh-autosuggestions yarn-autocompletions pnpm-shell-completion nx-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source $HOME/.antidote/antidote.zsh
+antidote load
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
