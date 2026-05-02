@@ -71,9 +71,9 @@ ZSH_THEME="marko"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git zsh-syntax-highlighting zsh-autosuggestions yarn-autocompletions pnpm-shell-completion nx-completion)
+# plugins=(git zsh-syntax-highlighting zsh-autosuggestions yarn-autocompletions pnpm-shell-completion nx-completion)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
