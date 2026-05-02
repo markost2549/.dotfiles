@@ -1,0 +1,7 @@
+ohmyzsh/ohmyzsh path:plugins/git
+
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+
+g-plane/zsh-yarn-autocompletions
+jscutlery/nx-completion
