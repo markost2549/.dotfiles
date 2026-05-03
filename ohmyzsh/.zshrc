@@ -3,12 +3,15 @@ export ZSH="$HOME/.oh-my-zsh"
 export NX_TUI=false
 
 ZSH_THEME="marko"
-ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
+ZSH_CUSTOM=$HOME/custom
 
 autoload -Uz compinit && compinit
 
 source $HOME/.antidote/antidote.zsh
 antidote load
+
+source $ZSH_CUSTOM/themes/marko.zsh-theme
+source $ZSH_CUSTOM/myalias.zsh
 
 
 
