@@ -1,7 +1,0 @@
-alias ys='pnpm start'
-alias c='clear'
-alias test='pnpm nx run data-integrator:test --codeCoverage'
-alias lint='pnpm nx run data-integrator:lint --fix'
-alias gmrem='git branch --merged | egrep -v '\''(^\*|master|dev|main)'\'' | xargs git branch -d'
-alias gundo='git reset --soft HEAD~1'
-alias killangular='sudo kill $(sudo lsof -t -i:4200)'

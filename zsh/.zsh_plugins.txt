@@ -1,7 +1,8 @@
-ohmyzsh/ohmyzsh path:plugins/git
+# Git helpers (only what we need)
+ohmyzsh/ohmyzsh path:lib/git.zsh
 
+# UX
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
-
 g-plane/zsh-yarn-autocompletions
 jscutlery/nx-completion

@@ -1,0 +1,10 @@
+add_newline = false
+
+[git_branch]
+format = "[$branch]($style) "
+
+[nodejs]
+disabled = false
+
+[cmd_duration]
+min_time = 500
