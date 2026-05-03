@@ -13,7 +13,7 @@ antidote load
 eval "$(starship init zsh)"
 
 # ---------- env ----------
-source ~/.dotfiles/zsh/env.zsh
+source ~/dotfiles/zsh/env.zsh
 
 # ---------- aliases ----------
-source ~/.dotfiles/zsh/aliases.zsh
+source ~/dotfiles/zsh/aliases.zsh
