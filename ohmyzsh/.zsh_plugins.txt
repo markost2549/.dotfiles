@@ -5,3 +5,5 @@ zsh-users/zsh-syntax-highlighting
 
 g-plane/zsh-yarn-autocompletions
 jscutlery/nx-completion
+
+romkatv/powerlevel10k
