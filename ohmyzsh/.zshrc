@@ -73,7 +73,7 @@ ZSH_THEME="marko"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git zsh-syntax-highlighting zsh-autosuggestions yarn-autocompletions pnpm-shell-completion nx-completion)
 
-# source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
