@@ -1,8 +1,19 @@
-# Git helpers (only what we need)
-ohmyzsh/ohmyzsh path:lib/git.zsh
+# Antidote plugin bundle
+# One plugin per line: <github-user>/<repo> [options]
+# Run `antidote bundle < .zsh_plugins.txt > .zsh_plugins.zsh` to rebuild,
+# or just edit this file — .zshrc regenerates it automatically.
 
-# UX
+# Useful OMZ plugins (antidote can pull individual paths from oh-my-zsh)
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/extract
+
+# Completions (load before syntax highlighting / autosuggestions)
+zsh-users/zsh-completions
+
+# Autosuggestions - suggests commands as you type based on history
 zsh-users/zsh-autosuggestions
+
+# Syntax highlighting - MUST be loaded last
 zsh-users/zsh-syntax-highlighting
-g-plane/zsh-yarn-autocompletions
-jscutlery/nx-completion
