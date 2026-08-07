@@ -53,9 +53,10 @@ eval "$(starship init zsh)"
 [[ -f "$HOME/.config/zsh/env.zsh" ]] && source "$HOME/.config/zsh/env.zsh"
 [[ -f "$HOME/.config/zsh/functions.zsh" ]] && source "$HOME/.config/zsh/functions.zsh"
 
+
 # ---- Editor ----
 export EDITOR='vim'
 export VISUAL='vim'
 
 # ---- Machine-local overrides (never tracked in git) ----
-[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+[[ -f "$HOME/.config/zsh/local.zsh" ]] && source "$HOME/.config/zsh/local.zsh"
