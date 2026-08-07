@@ -1,0 +1,6 @@
+# Machine-specific Zsh configuration
+zsh/.config/zsh/local.zsh
+
+# Zsh generated files
+.zsh_history
+.zcompdump*

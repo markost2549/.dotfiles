@@ -1,0 +1,5 @@
+# Machine-specific configuration goes here.
+
+# Example:
+# export EDITOR="nvim"
+# alias work="cd ~/work"

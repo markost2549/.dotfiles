@@ -1,20 +1,22 @@
-# ---------- performance ----------
-export ZSH_DISABLE_COMPFIX=true
+# --------------------------------------------------
+# Antidote
+# --------------------------------------------------
 
-# ---------- completion ----------
+source "$HOME/.local/share/antidote/antidote.zsh"
+
+antidote load "$HOME/.zsh_plugins.txt"
+
+
+# --------------------------------------------------
+# Zsh
+# --------------------------------------------------
+
 autoload -Uz compinit
-compinit -C
+compinit
 
-# ---------- antidote ----------
-source $HOME/.antidote/antidote.zsh
-antidote load
 
-# ---------- prompt (starship) ----------
+# --------------------------------------------------
+# Starship
+# --------------------------------------------------
+
 eval "$(starship init zsh)"
-
-# ---------- env ----------
-source ~/.dotfiles/zsh/env.zsh
-
-# ---------- aliases ----------
-source ~/.dotfiles/zsh/aliases.zsh
-

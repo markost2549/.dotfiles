@@ -1,2 +1,0 @@
-#NVM installation
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.6/install.sh | bash
