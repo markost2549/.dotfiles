@@ -7,6 +7,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# Gruvbox Rainbow theme
 export STARSHIP_CONFIG=~/.config/gruvbox-rainbow.toml
+
+# No Nerd font symbols
 # export STARSHIP_CONFIG=~/.config/no-nerd-font.toml
+
+# Nerd font symbols
 # export STARSHIP_CONFIG=~/.config/nerd-font-symbols.toml
+
+# Plain text symbols
+# export STARSHIP_CONFIG=~/.config/plain-text-symbols.toml
