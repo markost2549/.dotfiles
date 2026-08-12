@@ -33,8 +33,8 @@ install_packages_linux() {
 
   install_yarn_completion(){
     if [[ ! -x "$YARN_COMPLETIONS_BIN" ]]; then
-      printf '\nYarn Zsh autocompletion binary is missing.\n'
-    read -r "REPLY?Build it now with cargo? [y/N] "
+    printf '\nYarn Zsh autocompletion binary is missing.\n'
+    read -r -p "Build it now with cargo? [y/N] " REPLY
 
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     if ! command -v cargo >/dev/null 2>&1; then
