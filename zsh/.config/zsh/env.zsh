@@ -9,4 +9,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export STARSHIP_CONFIG=~/.config/gruvbox-rainbow.toml
 # export STARSHIP_CONFIG=~/.config/no-nerd-font.toml
-# export STARSHIP_CONFIG=~/.config/starship.toml
+# export STARSHIP_CONFIG=~/.config/nerd-font-symbols.toml
