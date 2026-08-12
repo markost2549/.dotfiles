@@ -5,28 +5,21 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PACKAGES=(zsh starship git)
+PACKAGES=(zsh starship)
+YARN_COMPLETIONS_DIR="$HOME/.antidote/github.com/g-plane/zsh-yarn-autocompletions"
+YARN_COMPLETIONS_BIN="$YARN_COMPLETIONS_DIR/yarn-autocompletions"
 
 info() { printf "\033[1;34m==>\033[0m %s\n" "$1"; }
 
-install_packages_macos() {
-  if ! command -v brew >/dev/null 2>&1; then
-    info "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
-  fi
-  info "Installing packages via Homebrew..."
-  brew install zsh git stow starship
-}
 
 install_packages_linux() {
   if command -v apt-get >/dev/null 2>&1; then
     sudo apt-get update
-    sudo apt-get install -y zsh git stow curl
+    sudo apt-get install -y zsh git stow curl cargo 
   elif command -v pacman >/dev/null 2>&1; then
-    sudo pacman -Sy --noconfirm zsh git stow curl
+    sudo pacman -Sy --noconfirm zsh git stow curl cargo 
   elif command -v dnf >/dev/null 2>&1; then
-    sudo dnf install -y zsh git stow curl
+    sudo dnf install -y zsh git stow curl cargo
   else
     echo "Unsupported package manager. Install zsh, git, and stow manually, then re-run this script." >&2
     exit 1
@@ -38,11 +31,38 @@ install_packages_linux() {
   fi
 }
 
+  install_yarn_completion(){
+    if [[ ! -x "$YARN_COMPLETIONS_BIN" ]]; then
+      printf '\nYarn Zsh autocompletion binary is missing.\n'
+    read -r "REPLY?Build it now with cargo? [y/N] "
+
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    if ! command -v cargo >/dev/null 2>&1; then
+      echo "Error: cargo is not installed."
+      exit 1
+    fi
+
+    cd "$YARN_COMPLETIONS_DIR" || exit 1
+
+    cargo build --release &&
+      cp target/release/yarn-autocompletions "$YARN_COMPLETIONS_BIN" &&
+      echo "Yarn autocompletion installed."
+  else
+    echo "Skipping Yarn autocompletion setup."
+  fi
+fi
+}
+
 info "Detecting OS..."
 case "$(uname -s)" in
-  Darwin) install_packages_macos ;;
-  Linux)  install_packages_linux ;;
-  *) echo "Unsupported OS: $(uname -s)" >&2; exit 1 ;;
+  Linux)
+    install_packages_linux
+    install_yarn_completion
+    ;;
+  *)
+    echo "Unsupported OS: $(uname -s)" >&2
+    exit 1
+    ;;
 esac
 
 info "Symlinking dotfiles with GNU Stow: ${PACKAGES[*]}"
