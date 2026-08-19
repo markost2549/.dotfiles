@@ -10,7 +10,7 @@ ohmyzsh/ohmyzsh path:plugins/command-not-found
 ohmyzsh/ohmyzsh path:plugins/extract
 
 # Completions (load before syntax highlighting / autosuggestions)
-#zsh-users/zsh-completions
+zsh-users/zsh-completions
 g-plane/zsh-yarn-autocompletions
 
 # Autosuggestions - suggests commands as you type based on history

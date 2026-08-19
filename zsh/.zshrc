@@ -27,6 +27,8 @@ else
   compinit -C
 fi
 
+zstyle ':completion:*' menu select
+
 # ---- Antidote (zsh plugin manager) ----
 ANTIDOTE_HOME="${ZDOTDIR:-$HOME}/.antidote"
 if [[ ! -d "$ANTIDOTE_HOME" ]]; then
