@@ -50,6 +50,10 @@ source "$zsh_plugins_static"
 # ---- Starship prompt ----
 eval "$(starship init zsh)"
 
+if zoxide --version &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
 # ---- Aliases ----
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
 [[ -f "$HOME/.config/zsh/env.zsh" ]] && source "$HOME/.config/zsh/env.zsh"
