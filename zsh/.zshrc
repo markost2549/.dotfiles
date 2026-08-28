@@ -50,8 +50,10 @@ source "$zsh_plugins_static"
 # ---- Starship prompt ----
 eval "$(starship init zsh)"
 
-if zoxide --version &>/dev/null; then
+if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
+else
+  echo "zoxide is not installed. Install it with: sudo dnf install zoxide"
 fi
 
 # ---- Aliases ----
