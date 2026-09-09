@@ -36,5 +36,9 @@ alias pi="pnpm install"
 alias pr="pnpm run"
 
 # ---------- misc ----------
-alias ll="ls -lah"
+# alias ll="ls -lah" #OLD
+alias ls='eza --group-directories-first'
+alias ll='eza -lah --group-directories-first'
+alias la='eza -la --group-directories-first'
+alias l='eza -l --group-directories-first'
 alias ..="cd .."
