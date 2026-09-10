@@ -47,6 +47,19 @@ if [[ ! -f "$zsh_plugins_static" || "$zsh_plugins" -nt "$zsh_plugins_static" ]];
 fi
 source "$zsh_plugins_static"
 
+# ---- Zsh keybindings ----
+# Ghostty / ZLE key bindings
+bindkey -e
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
+bindkey '\e[5~' up-line-or-history
+bindkey '\e[6~' down-line-or-history
+bindkey '\e[3~' delete-char
+
+# Ctrl+Left / Ctrl+Right
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 # ---- Starship prompt ----
 eval "$(starship init zsh)"
 
@@ -56,7 +69,7 @@ else
   echo "zoxide is not installed. Install it with: sudo dnf install zoxide"
 fi
 
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 # ---- Aliases ----
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
