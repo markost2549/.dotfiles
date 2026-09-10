@@ -69,7 +69,7 @@ else
   echo "zoxide is not installed. Install it with: sudo dnf install zoxide"
 fi
 
-# source <(fzf --zsh)
+source <(fzf --zsh)
 
 # ---- Aliases ----
 [[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
